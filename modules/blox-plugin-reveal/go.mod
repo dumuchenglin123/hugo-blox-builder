@@ -2,4 +2,4 @@ module github.com/dumuchenglin123/hugo-blox-builder/modules/blox-plugin-reveal
 
 go 1.15
 
-require github.com/dumuchenglin123/hugo-blox-builder/modules/blox-core v10.0.0
+require github.com/dumuchenglin123/hugo-blox-builder/modules/blox-core v1.9.9
