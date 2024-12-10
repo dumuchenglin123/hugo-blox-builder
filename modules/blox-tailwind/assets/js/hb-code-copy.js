@@ -36,7 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
     copyBtn.innerHTML = i18n['copy'];
 
     // There are 3 kinds of code block wrappers in Hugo, handle them all.
-    let wrapper;
+    let wrapper, content = codeblock;
     if (container.classList.contains('highlight')) {
       // Parent when Hugo line numbers disabled
       wrapper = container;
@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", () => {
       codeblock.parentElement.classList.add('highlight');
       wrapper = codeblock.parentNode;
     }
-    copyBtn.addEventListener("click", () => copyCodeToClipboard(copyBtn, wrapper));
+    copyBtn.addEventListener("click", () => copyCodeToClipboard(copyBtn, content));
     wrapper.appendChild(copyBtn);
   });
 });
